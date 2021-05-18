@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="js/validate.js"></script>
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="container">
+        <form name="contactForm" action="" onsubmit="return validateForm()">
+            <h2>Please get in touch</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur voluptates, alias eveniet optio beatae quos est iste aut voluptatum sed sapiente illo repellendus minus consequatur hic quam corporis. Cupiditate?</p>
+            <div class="row">
+                <div class="column">                    
+                    <input type="text" name="name" id="name" placeholder="Name" >
+                    <div class="error" id="name_error"></div>
+                </div>
+                <div class="column">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <div class="error" id="email_error"></div>
+                </div>
+                <div class="column">
+                    <input type="number" name="phone_number" id="phone_number" placeholder="Telephone">
+                    <div class="error" id="phone_error"></div>
+                </div>
+            </div>
+            <h2>Date of birth</h2>
+            <div class="row">
+                <div class="column">
+                    <select name="date" id="date">
+                        <option value="" disabled selected>Select Date</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select name="month" id="month">
+                        <option value="" disabled selected>Select Month</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select name="year" id="year">
+                        <option value="" disabled selected>Year</option>
+                    </select>
+                </div>
+                
+                
+                
+            </div>
+            <h2>Where did you hear abou us?</h2>
+            <div class="row hear-about">
+                <input type="radio" id="google" name="acquisition" value="google">
+                <label class="button" for="google">Google</label>
+                <input type="radio" id="eflyer" name="acquisition" value="eflyer">
+                <label class="button" for="eflyer">Eflyer</label>
+                <input type="radio" id="recommendation" name="acquisition" value="recommendation">
+                <label class="button" for="recommendation">Recommendation</label>
+                <input type="radio" id="orther" name="acquisition" value="orther">
+                <label class="button" for="orther">Other</label>
+            </div>
+            <h2>Message</h2>
+            <div class="row">
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+            <h2>File upload</h2>
+            <div class="row file-upload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <label for="fileToUpload" name="submit" class="button">BROWSE</label>
+            </div>
+            <div class="row confirm">
+                
+                <input type="checkbox" id="confirm" name="confirm" value="confirm">
+                <span class="checkmark"></span>
+                <div class="column">
+                    <label class="checkbox" for="confirm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque tempore natus, quasi officia odio libero. Provident qui suscipit iste. Laborum, modi. Rem exercitationem libero voluptate quidem maxime commodi nisi illum?</label><br>
+                    <div class="error" id="confirm_error"></div>
+                </div>
+            </div>
+            <div class="row">
+                <button class="button" type="submit">SUBMIT</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

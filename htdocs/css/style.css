@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin: 1.2em 0;
+    color: #192A38;
+}
+
+p {
+    padding: 0 1em;
+    margin-bottom: 1.2em;
+    color: #999999;
+    font-weight: 600;
+}
+
+.row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: stretch;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.column {
+    position: relative;
+    margin: 0 0.5em;
+    width: 100%;
+
+}
+
+div.error {
+    display: block;
+    width: 100%;
+    background-color: #F64C4E;
+}
+
+div.error p {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #eee;
+    padding: 0.5em;
+    margin-bottom: 0;
+}
+
+input, select, textarea {
+    width: 100%;
+    color: #999999;
+    padding: 0.7em 1.5em;
+    border: 2px solid #DDDDDD;
+    resize: vertical;
+}
+
+input.error {
+    border: 2px solid #F64C4E;
+}
+
+select {
+    background-color: #eee;
+}
+
+option {
+    background-color: #999;
+    color: #eee;
+}
+
+textarea {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* confirmation checkbox */
+
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100px;
+    width: 50px;
+    z-index: 99;
+}
+
+.checkmark {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    background-color: #eee;
+    border: 2px solid #DDDDDD;
+    margin-right: 1em;
+}
+  
+.confirm:hover input[type=checkbox] ~ .checkmark {
+    background-color: #ccc;
+}
+  
+input[type=checkbox]:checked ~ .checkmark {
+    background-color: #fff;
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+input[type=checkbox]:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.checkmark:after {
+    left: 20px;
+    top: 10px;
+    width: 10px;
+    height: 15px;
+    border: solid #00A14B;
+    border-width: 0 6px 6px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.confirm .column label {
+    text-align: left;
+    color: #999999;
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+}
+
+/* Confirmation chekcbox END */
+
+.hear-about {
+    justify-content: center;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label.button {
+    display: block;
+    color: #fff;
+    padding: 0.7em 1.5em;
+    margin: 0 0.5em;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #999999;
+    letter-spacing: 3px;
+}
+
+label.button:hover {
+    color: #fff;
+    background-color: #00A14B;
+}
+
+input[type=radio]:checked+label{
+    background-color: #00A14B;
+    color: #fff;
+}
+
+
+
+.file-upload .button,
+.button {
+    display: block;
+    color: #fff;
+    width: 100%;
+    max-width: 250px;
+    padding: 1.5em 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #00A14B;
+    border: none;
+    letter-spacing: 3px;
+}
+
+.file-upload .button {
+    transform: scale(0.8);
+}
+
